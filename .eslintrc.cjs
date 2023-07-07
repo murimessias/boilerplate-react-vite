@@ -6,9 +6,11 @@ module.exports = {
     'standard',
     'standard-jsx',
     'standard-react',
+    'plugin:perfectionist/recommended-natural',
     'prettier',
   ],
   root: true,
+  plugins: ['perfectionist'],
   rules: {
     'comma-dangle': [
       'error',
@@ -27,6 +29,15 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       { ignoreRestSiblings: true, caughtErrors: 'all' },
+    ],
+
+    'perfectionist/sort-objects': [
+      'error',
+      {
+        order: 'asc',
+        'partition-by-comment': true,
+        type: 'natural',
+      },
     ],
   },
 }
