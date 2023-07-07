@@ -6,12 +6,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "yarn test --watch",
+    "format": "prettier --write .",
     "lint": "eslint src --ext ts,tsx --max-warnings 0 --report-unused-disable-directives",
     "lint:fix": "yarn lint --fix",
-    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "@babel/core": "7.22.8",
