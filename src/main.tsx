@@ -1,6 +1,7 @@
+import { App } from '@/app'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from '@/app'
+
 import './index.css'
 
 const rootElement = document.querySelector('[data-js="root"]')
