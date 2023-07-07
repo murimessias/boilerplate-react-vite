@@ -6,11 +6,8 @@ module.exports = {
     'standard',
     'standard-jsx',
     'standard-react',
-    'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   root: true,
   rules: {
     'comma-dangle': [
