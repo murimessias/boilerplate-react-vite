@@ -1,43 +1,29 @@
+import { ReactComponent as Logo } from '@/assets/logo.svg'
 import { useState } from 'react'
-
-import './app.css'
-import { ReactComponent as Logo } from './logo.svg'
 
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Logo className='App-logo' title='logo' />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)} type='button'>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className='App-link'
-            href='https://vitejs.dev/guide/features.html'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Vite Docs
-          </a>
-        </p>
+    <div className='h-screen w-screen flex flex-col items-center justify-center'>
+      <header className='flex flex-col items-center gap-4'>
+        <Logo className='w-80 h-auto animate-spin' title='logo' />
+        <div className='space-y-1 text-center'>
+          <h1 className='text-2xl font-bold'>
+            Hello Vite + React! + TailwindCSS
+          </h1>
+          <p>
+            Edit <code className='font-mono text-sky-500'>app.tsx</code> and
+            save to test HMR updates.
+          </p>
+        </div>
+        <button
+          className='h-10 w-fit py-2 px-4 bg-sky-400 rounded hover:bg-sky-500 transition-colors text-white'
+          onClick={() => setCount((count) => count + 1)}
+          type='button'
+        >
+          count is: {count}
+        </button>
       </header>
     </div>
   )
