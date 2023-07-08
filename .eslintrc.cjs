@@ -7,30 +7,28 @@ module.exports = {
     'standard-jsx',
     'standard-react',
     'plugin:perfectionist/recommended-natural',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
-  root: true,
   plugins: ['perfectionist'],
+  root: true,
   rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { caughtErrors: 'all', ignoreRestSiblings: true },
+    ],
     'comma-dangle': [
       'error',
       {
         arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
         exports: 'always-multiline',
         functions: 'always-multiline',
+        imports: 'always-multiline',
+        objects: 'always-multiline',
       },
     ],
     'no-undef': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-pascal-case': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { ignoreRestSiblings: true, caughtErrors: 'all' },
-    ],
-
     'perfectionist/sort-objects': [
       'error',
       {
@@ -39,5 +37,7 @@ module.exports = {
         type: 'natural',
       },
     ],
+    'react/jsx-pascal-case': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 }
